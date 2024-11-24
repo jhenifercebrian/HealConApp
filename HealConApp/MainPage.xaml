@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealConApp.MainPage"
+             BackgroundColor="#E8F5E9">
+    <ScrollView>
+        <VerticalStackLayout Padding="10" Spacing="10">
+            <!-- Header -->
+            <Label Text="HealCon" 
+                   FontSize="24" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <!-- Input Section -->
+            <Frame Padding="10" 
+                   BackgroundColor="#E8F5E9" 
+                   BorderColor="LightGray" 
+                   CornerRadius="5">
+                <HorizontalStackLayout Spacing="10">
+                    <Button Text="Adicionar" 
+                        BackgroundColor="#AED581" 
+                        TextColor="White"
+                        CornerRadius="10"
+                        WidthRequest="100"
+                        HeightRequest="40"
+                        Clicked="OnAddTaskClicked" />
+                </HorizontalStackLayout>
+            </Frame>
+
+            
+            <Label Text="Consultas cadastradas" 
+                   FontSize="18" 
+                   FontAttributes="Bold"
+                   Margin="0,10,0,0" />
+
+            <!-- Listagem de consultas -->
+            <CollectionView ItemsSource="{Binding Consultas}" SelectionMode="None">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="10" Margin="5" BackgroundColor="#DCEDC8" CornerRadius="10" HasShadow="True">
+                            <VerticalStackLayout>
+
+                                <Label Text="{Binding PacienteNome}" FontSize="18" FontAttributes="Bold" />
+                                <Label Text="{Binding MedicoNome}" FontSize="16" />
+                                <Label Text="{Binding Especialidade}" FontSize="16" />
+                                <Label Text="{Binding DataConsulta, StringFormat='Data: {0:d}'}" />
+                                <Label Text="{Binding HorarioConsulta, StringFormat='Hora: {0:hh\\:mm}'}" />
+                                <HorizontalStackLayout Spacing="20" 
+                                           Margin="0,10,0,0">
+                                    <Button Text="Editar ✏️" 
+                                        BackgroundColor="Transparent" 
+                                        Clicked="OnEditTaskClicked" />
+                                    <Button Text="Excluir 🗑️" 
+                                        BackgroundColor="Transparent" 
+                                        Clicked="OnDeleteTaskClicked" />
+                                    <Button Text="Arquivos 📂"
+                                        BackgroundColor="Transparent"
+                                        Clicked="OnViewFilesClicked" />
+                                </HorizontalStackLayout>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

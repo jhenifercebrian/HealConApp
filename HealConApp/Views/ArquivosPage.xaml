@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealConApp.ArquivosPage"
+             Title="Arquivos da Consulta"
+             BackgroundColor="#E8F5E9">
+    <VerticalStackLayout Padding="10" Spacing="10">
+        <Button Text="Importar Arquivo"
+                BackgroundColor="#4CAF50"
+                TextColor="White"
+                Clicked="ImportarArquivo" />
+
+        <CollectionView ItemsSource="{Binding Arquivos}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Padding="10" Margin="5" BackgroundColor="#DCEDC8" CornerRadius="10" HasShadow="True">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding FileName}" FontSize="16" FontAttributes="Bold" />
+                            <Label Text="{Binding UploadDate, StringFormat='Enviado em: {0:G}'}" />
+                            <Button Text="Abrir"
+                                    BackgroundColor="Transparent"
+                                    Clicked="ExibirArquivo" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

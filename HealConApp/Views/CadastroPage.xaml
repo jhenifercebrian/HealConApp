@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HealConApp.CadastroPage"
+             Title="Cadastro de Consulta"
+             BackgroundColor="#E8F5E9">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Header -->
+            <Label Text="HealCon" 
+               FontSize="24" 
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+
+            <!-- Nome do Paciente -->
+            <Label Text="Nome do Paciente" FontSize="18" />
+            <Entry Placeholder="Digite o nome do paciente"
+                   Text="{Binding Consulta.PacienteNome}" />
+
+            <!-- Nome do Médico -->
+            <Label Text="Nome do Médico" FontSize="18" />
+            <Entry Placeholder="Digite o nome do médico"
+                   Text="{Binding Consulta.MedicoNome}" />
+
+            <!-- Especialidade -->
+            <Label Text="Especialidade" FontSize="18" />
+            <Entry Placeholder="Digite a especialidade"
+                   Text="{Binding Consulta.Especialidade}" />
+
+            <!-- Data da Consulta -->
+            <Label Text="Data da Consulta" FontSize="18" />
+            <DatePicker Date="{Binding Consulta.DataConsulta}" />
+
+            <!-- Horário da Consulta -->
+            <Label Text="Horário da Consulta" FontSize="18" />
+            <TimePicker Time="{Binding Consulta.HorarioConsulta}" />
+
+            <!-- Observações -->
+            <Label Text="Observações" FontSize="18" />
+            <Editor Placeholder="Adicione observações"
+                    AutoSize="TextChanges"
+                    Text="{Binding Consulta.Observacoes}" />
+
+            <!-- Botão Salvar -->
+            <Button Text="Salvar" 
+                    BackgroundColor="#4CAF50" 
+                    TextColor="White"
+                    CornerRadius="10"
+                    Command="{Binding SalvarCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
