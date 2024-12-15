@@ -22,20 +22,26 @@
 
             <!-- Botão Adicionar -->
             <Frame Padding="10"
-                   BackgroundColor="#FFFFFF"
-                   BorderColor="#E0E0E0"
-                   CornerRadius="10"
-                   HasShadow="True">
+               BackgroundColor="#FFFFFF"
+               BorderColor="#E0E0E0"
+               CornerRadius="10"
+               HasShadow="True">
                 <HorizontalStackLayout Spacing="10">
-                    <Button Text="Adicionar"
-                            BackgroundColor="#4169E1"
-                            TextColor="White"
-                            CornerRadius="20"
-                            WidthRequest="120"
-                            HeightRequest="50"
-                            Clicked="OnAddTaskClicked" />
+                    <Button BackgroundColor="Transparent"
+                        BorderColor="Transparent"
+                        Text="Cadastrar"
+                        TextColor="#4169E1"
+                        CornerRadius="20"
+                        WidthRequest="160"
+                        HeightRequest="65"
+                        Clicked="OnAddTaskClicked">
+                        <Button.ImageSource>
+                            <FileImageSource File="consulta_add_01.png" />
+                        </Button.ImageSource>
+                    </Button>
                 </HorizontalStackLayout>
             </Frame>
+
 
             <!-- Título Listagem -->
             <Label Text="Minhas Consultas"

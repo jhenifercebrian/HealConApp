@@ -50,6 +50,9 @@
 		<MauiImage Update="Resources\Images\dotnet_bot.png" Resize="True" BaseSize="300,185" />
 		<MauiImage Update="Resources\Images\default_layout.webp" />
 		<MauiImage Update="Resources\Images\heal_con_icon.webp" />
+		<MauiImage Update="Resources\Images\consulta_add.png" />
+		<MauiImage Update="Resources\Images\consulta_add_new.png" />
+		<MauiImage Update="Resources\Images\consulta_add_01.png" />
 
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />
