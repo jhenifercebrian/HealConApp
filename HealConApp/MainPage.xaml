@@ -1,13 +1,14 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HealConApp.MainPage"
-             BackgroundColor="#F3F4F6">
+             BackgroundColor="#F3F4F6"
+             BackgroundImageSource="default_layout.webp">
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="20">
             <!-- Header -->
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
                 <!-- Logo de saúde -->
-                <Image Source="heal_con-icon.webp" 
+                <Image Source="c:\jheni\app\healconapp\healconapp\resources\images\heal_con_icon.webp" 
                        WidthRequest="40" 
                        HeightRequest="40" 
                        VerticalOptions="Center" />
