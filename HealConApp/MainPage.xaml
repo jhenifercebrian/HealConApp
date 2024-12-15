@@ -8,7 +8,7 @@
             <!-- Header -->
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
                 <!-- Logo de saúde -->
-                <Image Source="c:\jheni\app\healconapp\healconapp\resources\images\heal_con_icon.webp" 
+                <Image Source="heal_con_icon.webp" 
                        WidthRequest="40" 
                        HeightRequest="40" 
                        VerticalOptions="Center" />
