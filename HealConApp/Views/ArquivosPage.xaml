@@ -4,53 +4,55 @@
              x:Class="HealConApp.ArquivosPage"
              BackgroundColor="#F3F4F6"
              BackgroundImageSource="default_layout.webp">
-    <VerticalStackLayout Padding="20" Spacing="20">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
 
-        <!-- Título Listagem -->
-        <Label Text="Arquivos da Consulta"
-             FontSize="20"
-             FontAttributes="Bold"
-             TextColor="#6495ED" />
-        
-        <!-- Botão Importar Arquivo -->
-        <Button Text="Importar Arquivo"
-                BackgroundColor="#4169E1"
-                TextColor="White"
-                CornerRadius="25"
-                HeightRequest="50"
-                FontAttributes="Bold"
-                Clicked="ImportarArquivo" />
+            <!-- Título Listagem -->
+            <Label Text="Arquivos da Consulta"
+                 FontSize="20"
+                 FontAttributes="Bold"
+                 TextColor="#6495ED" />
 
-        <!-- Lista de Arquivos -->
-        <CollectionView ItemsSource="{Binding Arquivos}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Frame Padding="15" Margin="10" 
-                           BackgroundColor="#FFFFFF" 
-                           CornerRadius="15" 
-                           HasShadow="True"
-                           BorderColor="#E0E0E0">
-                        <VerticalStackLayout Spacing="10">
-                            <!-- Nome do Arquivo -->
-                            <Label Text="{Binding FileName}" 
-                                   FontSize="18" 
-                                   FontAttributes="Bold" 
-                                   TextColor="#4169E1" />
-                            <!-- Data de Envio -->
-                            <Label Text="{Binding UploadDate, StringFormat='Enviado em: {0:G}'}" 
-                                   FontSize="16" 
-                                   TextColor="#616161" />
-                            <!-- Botão Abrir -->
-                            <Button Text="Visualizar" 
-                                    BackgroundColor="#E8F5E9" 
-                                    TextColor="#4169E1"
-                                    CornerRadius="10"
-                                    HeightRequest="40"
-                                    Clicked="ExibirArquivo" />
-                        </VerticalStackLayout>
-                    </Frame>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </VerticalStackLayout>
+            <!-- Botão Importar Arquivo -->
+            <Button Text="Importar Arquivo"
+                    BackgroundColor="#4169E1"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="50"
+                    FontAttributes="Bold"
+                    Clicked="ImportarArquivo" />
+
+            <!-- Lista de Arquivos -->
+            <CollectionView ItemsSource="{Binding Arquivos}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Padding="15" Margin="10" 
+                               BackgroundColor="#FFFFFF" 
+                               CornerRadius="15" 
+                               HasShadow="True"
+                               BorderColor="#E0E0E0">
+                            <VerticalStackLayout Spacing="10">
+                                <!-- Nome do Arquivo -->
+                                <Label Text="{Binding FileName}" 
+                                       FontSize="18" 
+                                       FontAttributes="Bold" 
+                                       TextColor="#4169E1" />
+                                <!-- Data de Envio -->
+                                <Label Text="{Binding UploadDate, StringFormat='Enviado em: {0:G}'}" 
+                                       FontSize="16" 
+                                       TextColor="#616161" />
+                                <!-- Botão Abrir -->
+                                <Button Text="Visualizar" 
+                                        BackgroundColor="#E8F5E9" 
+                                        TextColor="#4169E1"
+                                        CornerRadius="10"
+                                        HeightRequest="40"
+                                        Clicked="ExibirArquivo" />
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
