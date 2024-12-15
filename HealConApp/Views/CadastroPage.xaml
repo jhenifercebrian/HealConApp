@@ -3,49 +3,104 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HealConApp.CadastroPage"
              Title="Cadastro de Consulta"
-             BackgroundColor="#E8F5E9">
+             BackgroundColor="#F3F4F6">
     <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="15">
+        <VerticalStackLayout Padding="20" Spacing="20">
             <!-- Header -->
-            <Label Text="HealCon" 
-               FontSize="24" 
-               FontAttributes="Bold"
-               HorizontalOptions="Center" />
+            <VerticalStackLayout>
+                <Label Text="HealCon"
+                       FontSize="32"
+                       FontAttributes="Bold"
+                       TextColor="#6495ED"
+                       HorizontalOptions="Center" />
+                <BoxView HeightRequest="2" 
+                         BackgroundColor="#6495ED" 
+                         HorizontalOptions="Fill" />
+            </VerticalStackLayout>
 
             <!-- Nome do Paciente -->
-            <Label Text="Nome do Paciente" FontSize="18" />
-            <Entry Placeholder="Digite o nome do paciente"
-                   Text="{Binding Consulta.PacienteNome}" />
+            <Label Text="Nome do Paciente" 
+                   FontSize="18" 
+                   TextColor="#616161" />
+            <Frame Padding="0"
+                   CornerRadius="10"
+                   BorderColor="#E0E0E0"
+                   BackgroundColor="White">
+                <Entry Placeholder="Digite o nome do paciente"
+                       Text="{Binding Consulta.PacienteNome}"
+                       Margin="10,5,10,5" />
+            </Frame>
 
             <!-- Nome do Médico -->
-            <Label Text="Nome do Médico" FontSize="18" />
-            <Entry Placeholder="Digite o nome do médico"
-                   Text="{Binding Consulta.MedicoNome}" />
+            <Label Text="Nome do Médico" 
+                   FontSize="18" 
+                   TextColor="#616161" />
+            <Frame Padding="0"
+                   CornerRadius="10"
+                   BorderColor="#E0E0E0"
+                   BackgroundColor="White">
+                <Entry Placeholder="Digite o nome do médico"
+                       Text="{Binding Consulta.MedicoNome}"
+                       Margin="10,5,10,5" />
+            </Frame>
 
             <!-- Especialidade -->
-            <Label Text="Especialidade" FontSize="18" />
-            <Entry Placeholder="Digite a especialidade"
-                   Text="{Binding Consulta.Especialidade}" />
+            <Label Text="Especialidade" 
+                   FontSize="18" 
+                   TextColor="#616161" />
+            <Frame Padding="0"
+                   CornerRadius="10"
+                   BorderColor="#E0E0E0"
+                   BackgroundColor="White">
+                <Entry Placeholder="Digite a especialidade"
+                       Text="{Binding Consulta.Especialidade}"
+                       Margin="10,5,10,5" />
+            </Frame>
 
             <!-- Data da Consulta -->
-            <Label Text="Data da Consulta" FontSize="18" />
-            <DatePicker Date="{Binding Consulta.DataConsulta}" />
+            <Label Text="Data da Consulta" 
+                   FontSize="18" 
+                   TextColor="#616161" />
+            <Frame Padding="0"
+                   CornerRadius="10"
+                   BorderColor="#E0E0E0"
+                   BackgroundColor="White">
+                <DatePicker Date="{Binding Consulta.DataConsulta}"
+                            Margin="10,5,10,5" />
+            </Frame>
 
             <!-- Horário da Consulta -->
-            <Label Text="Horário da Consulta" FontSize="18" />
-            <TimePicker Time="{Binding Consulta.HorarioConsulta}" />
+            <Label Text="Horário da Consulta" 
+                   FontSize="18" 
+                   TextColor="#616161" />
+            <Frame Padding="0"
+                   CornerRadius="10"
+                   BorderColor="#E0E0E0"
+                   BackgroundColor="White">
+                <TimePicker Time="{Binding Consulta.HorarioConsulta}"
+                            Margin="10,5,10,5" />
+            </Frame>
 
             <!-- Observações -->
-            <Label Text="Observações" FontSize="18" />
-            <Editor Placeholder="Adicione observações"
-                    AutoSize="TextChanges"
-                    Text="{Binding Consulta.Observacoes}" />
+            <Label Text="Observações" 
+                   FontSize="18" 
+                   TextColor="#616161" />
+            <Frame Padding="0"
+                   CornerRadius="10"
+                   BorderColor="#E0E0E0"
+                   BackgroundColor="White">
+                <Editor Placeholder="Adicione observações"
+                        AutoSize="TextChanges"
+                        Text="{Binding Consulta.Observacoes}"
+                        Margin="10,5,10,5" />
+            </Frame>
 
             <!-- Botão Salvar -->
-            <Button Text="Salvar" 
-                    BackgroundColor="#4CAF50" 
+            <Button Text="Salvar"
+                    BackgroundColor="#6495ED"
                     TextColor="White"
-                    CornerRadius="10"
+                    CornerRadius="25"
+                    HeightRequest="50"
                     Command="{Binding SalvarCommand}" />
         </VerticalStackLayout>
     </ScrollView>

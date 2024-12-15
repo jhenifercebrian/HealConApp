@@ -2,23 +2,49 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HealConApp.ArquivosPage"
-             Title="Arquivos da Consulta"
-             BackgroundColor="#E8F5E9">
-    <VerticalStackLayout Padding="10" Spacing="10">
+             BackgroundColor="#F3F4F6">
+    <VerticalStackLayout Padding="20" Spacing="20">
+
+        <!-- Título Listagem -->
+        <Label Text="Arquivos da Consulta"
+             FontSize="20"
+             FontAttributes="Bold"
+             TextColor="#6495ED" />
+        
+        <!-- Botão Importar Arquivo -->
         <Button Text="Importar Arquivo"
-                BackgroundColor="#4CAF50"
+                BackgroundColor="#6495ED"
                 TextColor="White"
+                CornerRadius="25"
+                HeightRequest="50"
+                FontAttributes="Bold"
                 Clicked="ImportarArquivo" />
 
+        <!-- Lista de Arquivos -->
         <CollectionView ItemsSource="{Binding Arquivos}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="10" Margin="5" BackgroundColor="#DCEDC8" CornerRadius="10" HasShadow="True">
-                        <VerticalStackLayout>
-                            <Label Text="{Binding FileName}" FontSize="16" FontAttributes="Bold" />
-                            <Label Text="{Binding UploadDate, StringFormat='Enviado em: {0:G}'}" />
-                            <Button Text="Abrir"
-                                    BackgroundColor="Transparent"
+                    <Frame Padding="15" Margin="10" 
+                           BackgroundColor="#FFFFFF" 
+                           CornerRadius="15" 
+                           HasShadow="True"
+                           BorderColor="#E0E0E0">
+                        <VerticalStackLayout Spacing="10">
+                            <!-- Nome do Arquivo -->
+                            <Label Text="{Binding FileName}" 
+                                   FontSize="18" 
+                                   FontAttributes="Bold" 
+                                   TextColor="#6495ED" />
+                            <!-- Data de Envio -->
+                            <Label Text="{Binding UploadDate, StringFormat='Enviado em: {0:G}'}" 
+                                   FontSize="16" 
+                                   TextColor="#616161" />
+                            <!-- Botão Abrir -->
+                            <Button Text="Abrir" 
+                                    BackgroundColor="#E8F5E9" 
+                                    TextColor="#6495ED"
+                                    CornerRadius="10"
+                                    HeightRequest="40"
                                     Clicked="ExibirArquivo" />
                         </VerticalStackLayout>
                     </Frame>

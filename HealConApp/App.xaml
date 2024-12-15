@@ -5,10 +5,26 @@
              x:Class="HealConApp.App">
     <Application.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
+            <!-- Estilo para Botões -->
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#4CAF50" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="CornerRadius" Value="20" />
+                <Setter Property="HeightRequest" Value="50" />
+            </Style>
+
+            <!-- Estilo para Labels -->
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="#2E7D32" />
+            </Style>
+
+            <!-- Estilo para Frames -->
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#FFFFFF" />
+                <Setter Property="CornerRadius" Value="15" />
+                <Setter Property="HasShadow" Value="True" />
+                <Setter Property="BorderColor" Value="#E0E0E0" />
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
