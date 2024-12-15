@@ -16,7 +16,7 @@
                 <Label Text="HealCon" 
                        FontSize="32" 
                        FontAttributes="Bold"
-                       TextColor="#6495ED"
+                       TextColor="#4169E1"
                        VerticalOptions="Center" />
             </HorizontalStackLayout>
 
@@ -28,7 +28,7 @@
                    HasShadow="True">
                 <HorizontalStackLayout Spacing="10">
                     <Button Text="Adicionar"
-                            BackgroundColor="#6495ED"
+                            BackgroundColor="#4169E1"
                             TextColor="White"
                             CornerRadius="20"
                             WidthRequest="120"
@@ -38,10 +38,10 @@
             </Frame>
 
             <!-- Título Listagem -->
-            <Label Text="Consultas cadastradas"
+            <Label Text="Minhas Consultas"
                    FontSize="20"
                    FontAttributes="Bold"
-                   TextColor="#6495ED" />
+                   TextColor="#4169E1" />
 
             <!-- Listagem de Consultas -->
             <CollectionView ItemsSource="{Binding Consultas}" SelectionMode="None">
@@ -54,7 +54,7 @@
                                BorderColor="#E0E0E0"
                                HasShadow="True">
                             <VerticalStackLayout Spacing="5">
-                                <Label Text="{Binding PacienteNome}" FontSize="20" FontAttributes="Bold" TextColor="#87CEEB" />
+                                <Label Text="{Binding PacienteNome}" FontSize="20" FontAttributes="Bold" TextColor="#6495ED" />
                                 <Label Text="{Binding MedicoNome}" FontSize="16" TextColor="#616161" />
                                 <Label Text="{Binding Especialidade}" FontSize="16" TextColor="#616161" />
                                 <Label Text="{Binding DataConsulta, StringFormat='Data: {0:d}'}" FontSize="16" TextColor="#616161" />

@@ -14,7 +14,7 @@
         
         <!-- Botão Importar Arquivo -->
         <Button Text="Importar Arquivo"
-                BackgroundColor="#6495ED"
+                BackgroundColor="#4169E1"
                 TextColor="White"
                 CornerRadius="25"
                 HeightRequest="50"
@@ -35,15 +35,15 @@
                             <Label Text="{Binding FileName}" 
                                    FontSize="18" 
                                    FontAttributes="Bold" 
-                                   TextColor="#6495ED" />
+                                   TextColor="#4169E1" />
                             <!-- Data de Envio -->
                             <Label Text="{Binding UploadDate, StringFormat='Enviado em: {0:G}'}" 
                                    FontSize="16" 
                                    TextColor="#616161" />
                             <!-- Botão Abrir -->
-                            <Button Text="Abrir" 
+                            <Button Text="Visualizar" 
                                     BackgroundColor="#E8F5E9" 
-                                    TextColor="#6495ED"
+                                    TextColor="#4169E1"
                                     CornerRadius="10"
                                     HeightRequest="40"
                                     Clicked="ExibirArquivo" />

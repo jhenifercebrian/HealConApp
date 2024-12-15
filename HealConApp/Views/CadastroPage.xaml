@@ -12,10 +12,10 @@
                 <Label Text="HealCon"
                        FontSize="32"
                        FontAttributes="Bold"
-                       TextColor="#6495ED"
+                       TextColor="#4169E1"
                        HorizontalOptions="Center" />
                 <BoxView HeightRequest="2" 
-                         BackgroundColor="#6495ED" 
+                         BackgroundColor="#4169E1" 
                          HorizontalOptions="Fill" />
             </VerticalStackLayout>
 
@@ -98,7 +98,7 @@
 
             <!-- Botão Salvar -->
             <Button Text="Salvar"
-                    BackgroundColor="#6495ED"
+                    BackgroundColor="#4169E1"
                     TextColor="White"
                     CornerRadius="25"
                     HeightRequest="50"
